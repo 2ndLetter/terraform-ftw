@@ -1,0 +1,54 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Terraform prerequisites for the "Deploying to AWS with Terraform and Ansible" course.
+
+Parameters:
+  Versioning:
+    Description: Versioning
+    Type: "String"
+  LockTableName:
+    Description: DynamoDB Lock Table name
+    Type: "String"
+
+Resources:
+  TFStateBucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: "aws:kms"
+      VersioningConfiguration:
+        Status: !Ref Versioning
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        RestrictPublicBuckets: true
+        IgnorePublicAcls: true
+
+  TFStateLockTable:
+    Type: 'AWS::DynamoDB::Table'
+    Properties:
+      TableName: !Ref LockTableName
+      AttributeDefinitions:
+        - AttributeName: LockID
+          AttributeType: S
+      KeySchema:
+        - AttributeName: LockID
+          KeyType: HASH
+      SSESpecification:
+        SSEEnabled: true
+        SSEType: KMS
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+
+Outputs:
+  TFStateBucket:
+    Value: !Ref "TFStateBucket"
+    Export:
+      Name: !Sub "${AWS::StackName}-TFStateBucket"
+  TFStateLockTable:
+    Value: !Ref "TFStateLockTable"
+    Export:
+      Name: !Sub "${AWS::StackName}-TFStateLockTable"

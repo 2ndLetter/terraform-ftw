@@ -1,0 +1,11 @@
+
+[
+    {
+        "ParameterKey": "Versioning",
+        "ParameterValue": "Enabled"
+    },
+    {
+        "ParameterKey": "LockTableName",
+        "ParameterValue": "tf-state-locks"
+    }
+]
