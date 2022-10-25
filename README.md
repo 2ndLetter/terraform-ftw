@@ -16,6 +16,7 @@
   - [ ] EC2 ( ELB | ASGs | Launch Configs | SGs )
   - [ ] S3
   - [ ] ACM
+  - [ ] IAM
   - [ ] CloudFormation
 - [ ] Ansible
 - [ ] Chef
