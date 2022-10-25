@@ -1,1 +1,1 @@
-#fill me out
+../shared/outputs.tf
