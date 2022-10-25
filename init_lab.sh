@@ -16,7 +16,7 @@ done
 delete_lab() {    
     printf "Return S3 bucket name\n"
     S3_BUCKET=$(aws cloudformation list-exports \
-      --query "Exports[?Name=='cfn-stack-tf-prep-TFStateBucket'].Value" \
+      --query "Exports[?Name=='cfn-stack-tf-ftw-TFStateBucket'].Value" \
       --output text)
     
     printf "Empty the s3 bucket\n"
@@ -30,9 +30,9 @@ delete_lab() {
     printf "Delete CFN Stack\n"
     CFN_STACK_ID=$(aws cloudformation list-stacks \
       --stack-status-filter CREATE_COMPLETE \
-      --query "StackSummaries[?StackName=='cfn-stack-tf-prep'].StackId" \
+      --query "StackSummaries[?StackName=='cfn-stack-tf-ftw'].StackId" \
       --output text)
-    aws cloudformation delete-stack --stack-name cfn-stack-tf-prep
+    aws cloudformation delete-stack --stack-name cfn-stack-tf-ftw
     CFN_STACK_STATUS=$(aws cloudformation list-stacks \
       --query "StackSummaries[?StackId=='$CFN_STACK_ID'].StackStatus" \
       --output text)
@@ -59,14 +59,14 @@ init_lab() {
     rm -fr .terraform backend.tf .terraform.lock.hcl
     
     printf "Deploying CFN Stack\n"
-    scripts/cfn-deploy.sh -n tf-prep
+    scripts/cfn-deploy.sh -n tf-ftw
     
     printf "Copying source template to destination\n"
     cp source_templates/backend_template.tf backend.tf
     
     printf "Populating backend.tf file with value(s)\n"
     sed -i "s/S3_BUCKET_NAME/$(aws cloudformation list-exports \
-      --query "Exports[?Name=='cfn-stack-tf-prep-TFStateBucket'].Value" \
+      --query "Exports[?Name=='cfn-stack-tf-ftw-TFStateBucket'].Value" \
       --output text)/" backend.tf
 }
 
