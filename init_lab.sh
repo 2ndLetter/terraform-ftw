@@ -59,10 +59,10 @@ init_lab() {
     rm -fr .terraform backend.tf .terraform.lock.hcl
     
     printf "Deploying CFN Stack\n"
-    scripts/cfn-deploy.sh -n tf-ftw
+    cloudformation/scripts/cfn-deploy.sh -n tf-ftw
     
     printf "Copying source template to destination\n"
-    cp source_templates/backend_template.tf backend.tf
+    cp cloudformation/source_templates/backend_template.tf backend.tf
     
     printf "Populating backend.tf file with value(s)\n"
     sed -i "s/S3_BUCKET_NAME/$(aws cloudformation list-exports \
