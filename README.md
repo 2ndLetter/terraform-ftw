@@ -26,7 +26,7 @@
 ### Terraform Concepts:
 - [ ] Best Practices
 - [ ] Remote Backend (encrypted)
-- [ ] DRY (Don't Repeate Yourself)
+- [ ] DRY (Don't Repeate Yourself) ( Modules | Input/Output Vars )
 - [ ] Conditionals
 - [ ] Variables (types: primitive/complex)
 - [ ] Constrains (Type & Version)
