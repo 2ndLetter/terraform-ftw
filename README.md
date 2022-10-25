@@ -13,7 +13,9 @@
 - [ ] AWS
 - [ ] Ansible
 - [ ] Chef
-- [ ] Docker
+- [ ] Puppet?
+- [ ] Docker?
+- [ ] CloudFormation
 - [ ] GitHub Actions?
 
 ### Terraform Concepts:
@@ -21,9 +23,17 @@
 - [ ] Remote Backend (encrypted)
 - [ ] DRY (Don't Repeate Yourself)
 - [ ] Conditionals
-- [ ] Separate environments [dev|test|prod]
-- [ ] Modules
+- [ ] Variables (types: primitive/complex)
+- [ ] Constrains (Type & Version)
+- [ ] Meta-Arguments
+- [ ] Provisioners ( Ansible | Chef | Puppet )
+- [ ] Separate environments ( dev | test | prod )
+- [ ] Modules (Root/Child)
+  - [ ] Group resources logically
+  - [ ] Expose inputs/outputs
+  - [ ] Useful defaults
 - [ ] null_resource
-- [ ] Secrets Management
+- [ ] Secrets Management (Sensitive data)
 - [ ] Functions
-- [ ] Testing [Terratest | Kitchen-Terraform | Terraform-compliance]
+- [ ] Expressions
+- [ ] Testing ( Terratest | Kitchen-Terraform | Terraform-compliance )
