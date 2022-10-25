@@ -11,9 +11,15 @@
 - [ ] Hashicorp Terraform
 - [ ] Hashicorp Packer
 - [ ] AWS
+  - [ ] Route53 (Multi-Region)
+  - [ ] VPC ( Routes | NACLs )
+  - [ ] EC2 ( ELB | ASGs | Launch Configs | SGs )
+  - [ ] S3
+  - [ ] ACM
+  - [ ] CloudFormation
 - [ ] Ansible
 - [ ] Chef
-- [ ] CloudFormation
+
 - [ ] GitHub Actions?
 
 ### Terraform Concepts:
