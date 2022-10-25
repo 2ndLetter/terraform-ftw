@@ -13,8 +13,6 @@
 - [ ] AWS
 - [ ] Ansible
 - [ ] Chef
-- [ ] Puppet?
-- [ ] Docker?
 - [ ] CloudFormation
 - [ ] GitHub Actions?
 
@@ -28,7 +26,7 @@
 - [ ] Meta-Arguments
 - [ ] Provisioners ( Ansible | Chef | Puppet )
 - [ ] Separate environments ( dev | test | prod )
-- [ ] Modules (Root/Child)
+- [ ] Modules ( Root/Child | Local Path)
   - [ ] Group resources logically
   - [ ] Expose inputs/outputs
   - [ ] Useful defaults
