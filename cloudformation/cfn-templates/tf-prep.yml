@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  Terraform prerequisites for the "Deploying to AWS with Terraform and Ansible" course.
+  Terraform prerequisites for the Remote State management and Locking.
 
 Parameters:
   Versioning:
