@@ -1,17 +1,41 @@
 # terraform-ftw
 
-### To Do:
-- [] Change where backend.tf lives (figure out where it should go for multi-env folder structure)
-- [] Read AWS VPC Module documentation to figure out how to use
+## To Do:
+- [ ] Change where backend.tf lives (figure out where it should go for multi-env folder structure)
+- [ ] Read AWS VPC Module documentation to figure out how to use
 
-### Notes:
+## Modules:
+
+- [ ] network:
+  - [ ] VPC
+  - [ ] NACLs
+  - [ ] SGs
+  - [ ] IGW
+  
+- [ ] routing
+  - [ ] Route53
+  - [ ] Route Tables
+
+- [ ] Application:
+  - [ ] ALB
+  - [ ] ASG
+  - [ ] Launch Configs
+
+- [ ] Storage:
+  - [ ] S3 Buckets
+  
+- [ ] Security:
+  - [ ] IAM
+
+
+## Notes:
 - [ ] New VPC through multi-region application
 - [ ] Architecture Diagram (Graph)
 - [ ] Video of the deployment?
 - [ ] PDF of the deployment?
 - [ ] Output from tree command
 
-### Techonology Used:
+## Techonology Used:
 
 - [ ] Hashicorp Terraform
 - [ ] Hashicorp Packer
@@ -29,7 +53,7 @@
 
 - [ ] GitHub Actions?
 
-### Terraform Concepts:
+## Terraform Concepts:
 - [ ] Best Practices
 - [ ] Remote Backend ( State locking | Consistency | Encrypted )
 - [ ] DRY (Don't Repeate Yourself) ( Modules | Input/Output Vars )
