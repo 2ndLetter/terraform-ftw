@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-while getopts 'di' OPTION; do
+while getopts 'dic' OPTION; do
   case "$OPTION" in
     d)
       argD="delete_lab"
@@ -8,8 +8,11 @@ while getopts 'di' OPTION; do
     i)
       argI="init_lab"
       ;;
+    c)
+      argC="cleanup_dir"
+      ;;
     ?)
-      echo "Usage: $(basename $0) [-i] [-d]"
+      echo "Usage: $(basename $0) [-d] [-i] [-c]"
   esac
 done
 
@@ -51,30 +54,49 @@ delete_lab() {
         exit 1
       fi
     done
+    
+    printf "Running cleaup_dir function\n"
+    cleanup_dir
+    
     printf "CFN Stack Deletion Complete!\n"
 }
 
 init_lab() {
-    printf "Deleting files to initialize the working directory\n"
-    rm -fr .terraform backend.tf .terraform.lock.hcl
+    printf "Initialize the lab\n"
+    cleanup_dir
     
     printf "Deploying CFN Stack\n"
     cloudformation/scripts/cfn-deploy.sh -n tf-ftw
     
-    printf "Copying source template to destination\n"
-    cp cloudformation/source_templates/backend_template.tf backend.tf
-    
-    printf "Populating backend.tf file with value(s)\n"
+    printf "Populating backend files with value(s) with s3 bucket name\n"
+    find . -name backend.hcl -exec sed -i "s/S3_BUCKET_NAME/$(aws cloudformation list-exports \
+      --query "Exports[?Name=='cfn-stack-tf-ftw-TFStateBucket'].Value" \
+      --output text)/" {} \;
     sed -i "s/S3_BUCKET_NAME/$(aws cloudformation list-exports \
       --query "Exports[?Name=='cfn-stack-tf-ftw-TFStateBucket'].Value" \
-      --output text)/" backend.tf
+      --output text)/" modules/services/webserver-cluster/main.tf
+}
+
+cleanup_dir() {
+    printf "Deleting files to clean up the working directory\n"
+    set +e
+    find . -name .terraform -exec rm -fr {} \;
+    find . -name .terraform.lock.hcl -exec rm -fr {} \;
+    find . -name terraform.tfstate -exec rm -fr {} \;
+
+    printf "Populating backend files with template value(s)\n"
+    find . -name backend.hcl -exec sed -i \
+    "s/bucket.*= \".*\"/bucket         = \"S3_BUCKET_NAME\"/" {} \;
+    sed -i "s/bucket.*= \".*\"/bucket = \"S3_BUCKET_NAME\"/" modules/services/webserver-cluster/main.tf
+    set -e
 }
 
 if [ -z $1 ]
 then
-  echo "Error, this script requires the -i and/or -d flags to execute!"
+  echo "Error, this script requires the -d, -i, or -c flags to execute!"
   exit 1
 fi
 
+$argC
 $argD
 $argI
