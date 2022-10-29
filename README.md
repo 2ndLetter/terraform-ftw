@@ -9,6 +9,7 @@
 - [ ] Architecture Diagram (Graph)
 - [ ] Video of the deployment?
 - [ ] PDF of the deployment?
+- [ ] Output from tree command
 
 ### Techonology Used:
 
