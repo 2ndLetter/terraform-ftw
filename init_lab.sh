@@ -68,13 +68,13 @@ init_lab() {
     printf "Deploying CFN Stack\n"
     cloudformation/scripts/cfn-deploy.sh -n tf-ftw
     
-    printf "Populating backend files with value(s) with s3 bucket name\n"
-    find . -name backend.hcl -exec sed -i "s/S3_BUCKET_NAME/$(aws cloudformation list-exports \
-      --query "Exports[?Name=='cfn-stack-tf-ftw-TFStateBucket'].Value" \
-      --output text)/" {} \;
-    sed -i "s/S3_BUCKET_NAME/$(aws cloudformation list-exports \
-      --query "Exports[?Name=='cfn-stack-tf-ftw-TFStateBucket'].Value" \
-      --output text)/" modules/services/webserver-cluster/main.tf
+    #printf "Populating backend files with value(s) with s3 bucket name\n"
+    #find . -name backend.hcl -exec sed -i "s/S3_BUCKET_NAME/$(aws cloudformation list-exports \
+    #  --query "Exports[?Name=='cfn-stack-tf-ftw-TFStateBucket'].Value" \
+    #  --output text)/" {} \;
+    #sed -i "s/S3_BUCKET_NAME/$(aws cloudformation list-exports \
+    #  --query "Exports[?Name=='cfn-stack-tf-ftw-TFStateBucket'].Value" \
+    #  --output text)/" modules/services/webserver-cluster/main.tf
 }
 
 cleanup_dir() {
@@ -84,11 +84,11 @@ cleanup_dir() {
     find . -name .terraform.lock.hcl -exec rm -fr {} \;
     find . -name terraform.tfstate -exec rm -fr {} \;
 
-    printf "Populating backend files with template value(s)\n"
-    find . -name backend.hcl -exec sed -i \
-    "s/bucket.*= \".*\"/bucket         = \"S3_BUCKET_NAME\"/" {} \;
-    sed -i "s/bucket.*= \".*\"/bucket = \"S3_BUCKET_NAME\"/" modules/services/webserver-cluster/main.tf
-    set -e
+    #printf "Populating backend files with template value(s)\n"
+    #find . -name backend.hcl -exec sed -i \
+    #"s/bucket.*= \".*\"/bucket         = \"S3_BUCKET_NAME\"/" {} \;
+    #sed -i "s/bucket.*= \".*\"/bucket = \"S3_BUCKET_NAME\"/" modules/services/webserver-cluster/main.tf
+    #set -e
 }
 
 if [ -z $1 ]
