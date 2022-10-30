@@ -72,7 +72,6 @@ init_lab() {
     printf "Copying backend.hcl files to each environment"
     cp source_templates/backend_template.hcl environments/dev/backend.hcl
     cp source_templates/backend_template.hcl environments/prod/backend.hcl
-    cp source_templates/backend_template.hcl modules/network/backend.hcl
     
     printf "Populating backend files with s3 bucket name\n"
     find . -name backend.hcl -exec sed -i "s/S3_BUCKET_NAME/$(aws cloudformation list-exports \
@@ -90,7 +89,6 @@ cleanup_dir() {
     printf "Deleting backend files\n"
     rm -fr environments/dev/backend.hcl
     rm -fr environments/prod/backend.hcl
-    rm -fr modules/network/backend.hcl
     set -e
 }
 

@@ -12,11 +12,7 @@ resource "aws_vpc" "this" {
   }
 }
 
-#terraform {
-#  backend "s3" {
-#    key = "modules/network/terraform.tfstate"
-#  }
-#}
 
-# NACLs
-# SGs
+# ToDo:
+# - NACLs
+# - SGs
