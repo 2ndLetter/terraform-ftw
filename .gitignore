@@ -7,6 +7,7 @@
 
 # backend.tf files
 backend.tf
+*backend.hcl
 
 # lock.hcl files
 .terraform.lock.hcl
