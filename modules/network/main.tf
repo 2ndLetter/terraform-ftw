@@ -4,6 +4,11 @@ provider "aws" {
 }
 
 resource "aws_vpc" "this" {
-  cidr_block = "10.0.0.10/16"
-  
+  cidr_block = "10.0.0.0/16"
+}
+
+terraform {
+  backend "s3" {
+    key = "modules/network/terraform.tfstate"
+  }
 }
