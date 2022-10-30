@@ -1,6 +1,7 @@
 # terraform-ftw
 
 ## To Do:
+- [x] Learn Terraform basics (Courses/Blogs/Tutorials)
 - [x] Automate lab initialization
 - [x] Bootstrap AWS account with Terraform Remote State management via CloudFormation
 - [x] Learn how to use Local Terraform Modules
