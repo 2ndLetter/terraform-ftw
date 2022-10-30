@@ -2,6 +2,8 @@
 
 ## To Do:
 - [x] Automate lab initialization
+- [x] Bootstrap AWS account with Terraform Remote State management via CloudFormation
+- [x] Learn how to use Local Terraform Modules
 - [ ] Build out module folder structure
 - [ ] Read AWS VPC Module documentation to figure out how to use
 
