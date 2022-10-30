@@ -8,8 +8,14 @@
   - [x] Learn how to use Local Terraform Modules
 - [x] Automate lab initialization
 - [x] Bootstrap AWS account with Terraform Remote State management via CloudFormation
+- [x] Build out module folder structure
+- [ ] Build out network module:
+  - [ ] VPC
+  - [ ] NACLs
+  - [ ] SGs
+  - [ ] IGW
 - [ ] Add instructions to the scripts
-- [ ] Build out module folder structure
+
 - [ ] Read AWS VPC Module documentation to figure out how to use
 
 ---
@@ -67,7 +73,6 @@
   - [ ] CloudFormation
 - [ ] Ansible
 - [ ] Chef
-
 - [ ] GitHub Actions?
 
 ---
