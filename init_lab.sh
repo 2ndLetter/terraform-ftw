@@ -67,6 +67,10 @@ init_lab() {
     
     printf "Deploying CFN Stack\n"
     cloudformation/scripts/cfn-deploy.sh -n tf-ftw
+
+    printf "Copying backend.hcl files to each environment"
+    cp source_templates/backend_template.hcl environments/dev/backend.hcl
+    cp source_templates/backend_template.hcl environments/prod/backend.hcl
     
     printf "Populating backend files with s3 bucket name\n"
     find . -name backend.hcl -exec sed -i "s/S3_BUCKET_NAME/$(aws cloudformation list-exports \
@@ -81,9 +85,9 @@ cleanup_dir() {
     find . -name .terraform.lock.hcl -exec rm -fr {} \;
     find . -name terraform.tfstate -exec rm -fr {} \;
 
-    printf "Populating backend files with template value(s)\n"
-    find . -name backend.hcl -exec sed -i \
-    "s/bucket.*= \".*\"/bucket         = \"S3_BUCKET_NAME\"/" {} \;
+    printf "Deleting backend files\n"
+    rm -fr environments/dev/backend.hcl
+    rm -fr environments/prod/backend.hcl
     set -e
 }
 
