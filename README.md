@@ -8,6 +8,7 @@
   - [x] Learn how to use Local Terraform Modules
 - [x] Automate lab initialization
 - [x] Bootstrap AWS account with Terraform Remote State management via CloudFormation
+- [ ] Add instructions to the scripts
 - [ ] Build out module folder structure
 - [ ] Read AWS VPC Module documentation to figure out how to use
 
