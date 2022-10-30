@@ -57,14 +57,14 @@
 
 ## Terraform Concepts:
 - [ ] Best Practices
-- [ ] Remote Backend ( State locking | Consistency | Encrypted )
+- [x] Remote Backend ( State locking | Consistency | Encrypted )
 - [ ] DRY (Don't Repeate Yourself) ( Modules | Input/Output Vars )
 - [ ] Conditionals
 - [ ] Variables (types: primitive/complex)
 - [ ] Constrains (Type & Version)
 - [ ] Meta-Arguments
 - [ ] Provisioners ( Ansible | Chef | Puppet )
-- [ ] Separate environments ( dev | test | prod )
+- [ ] Separate environments ( dev | prod )
 - [ ] Modules ( Root/Child | Local Path)
   - [ ] Group resources logically
   - [ ] Expose inputs/outputs
@@ -73,4 +73,4 @@
 - [ ] Secrets Management (Sensitive data)
 - [ ] Functions
 - [ ] Expressions
-- [ ] Testing ( Terratest | Kitchen-Terraform | Terraform-compliance )
+- [ ] Testing ( Terratest | Terraform-compliance )
