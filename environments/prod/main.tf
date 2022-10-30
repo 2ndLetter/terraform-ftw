@@ -13,6 +13,6 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    key = "environments/dev/terraform.tfstate"
+    key = "environments/prod/terraform.tfstate"
   }
 }
