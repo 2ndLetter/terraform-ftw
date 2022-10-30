@@ -20,6 +20,11 @@
 ---
 
 ## Modules:
+- [ ] application:
+  - [ ] ALB
+  - [ ] ASG
+  - [ ] Launch Configs
+
 - [ ] network:
   - [ ] VPC
   - [ ] NACLs
@@ -30,14 +35,9 @@
   - [ ] Route53
   - [ ] Route Tables
 
-- [ ] application:
-  - [ ] ALB
-  - [ ] ASG
-  - [ ] Launch Configs
-
 - [ ] Storage:
   - [ ] S3 Buckets
-  
+
 - [ ] Security:
   - [ ] IAM
 
