@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "~> 4.37.0"
     }
   }
@@ -14,5 +14,14 @@ provider "aws" {
 terraform {
   backend "s3" {
     key = "environments/dev/terraform.tfstate"
+  }
+}
+
+resource "aws_instance" "web" {
+  ami           = ami-09d3b3274b6c5d4aa
+  instance_type = "t3.micro"
+
+  tags = {
+    Name = "HelloWorld"
   }
 }
