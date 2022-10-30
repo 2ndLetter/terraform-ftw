@@ -8,6 +8,8 @@
 - [ ] Build out module folder structure
 - [ ] Read AWS VPC Module documentation to figure out how to use
 
+---
+
 ## Modules:
 - [ ] network:
   - [ ] VPC
@@ -30,6 +32,7 @@
 - [ ] Security:
   - [ ] IAM
 
+---
 
 ## Notes:
 - [ ] New VPC through multi-region application
@@ -37,6 +40,8 @@
 - [ ] Video of the deployment?
 - [ ] PDF of the deployment?
 - [ ] Output from tree command
+
+---
 
 ## Techonology Used:
 
@@ -55,6 +60,8 @@
 - [ ] Chef
 
 - [ ] GitHub Actions?
+
+---
 
 ## Terraform Concepts:
 - [ ] Best Practices
