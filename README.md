@@ -1,10 +1,13 @@
 # terraform-ftw
 
+*The purpose of this repository is to document my Terraform journey, as well as display my current level of expertise.*
+
 ## To Do:
 - [x] Learn Terraform basics (Courses/Blogs/Tutorials)
+  - [x] Learn how to keep my TF IaC DRY
+  - [x] Learn how to use Local Terraform Modules
 - [x] Automate lab initialization
 - [x] Bootstrap AWS account with Terraform Remote State management via CloudFormation
-- [x] Learn how to use Local Terraform Modules
 - [ ] Build out module folder structure
 - [ ] Read AWS VPC Module documentation to figure out how to use
 
