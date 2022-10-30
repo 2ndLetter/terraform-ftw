@@ -30,7 +30,7 @@
   - [ ] Route53
   - [ ] Route Tables
 
-- [ ] Application:
+- [ ] application:
   - [ ] ALB
   - [ ] ASG
   - [ ] Launch Configs
