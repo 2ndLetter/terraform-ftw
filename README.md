@@ -1,11 +1,11 @@
 # terraform-ftw
 
 ## To Do:
-- [ ] Change where backend.tf lives (figure out where it should go for multi-env folder structure)
+- [x] Automate lab initialization
+- [ ] Build out module folder structure
 - [ ] Read AWS VPC Module documentation to figure out how to use
 
 ## Modules:
-
 - [ ] network:
   - [ ] VPC
   - [ ] NACLs

@@ -35,6 +35,7 @@ delete_lab() {
       --stack-status-filter CREATE_COMPLETE \
       --query "StackSummaries[?StackName=='cfn-stack-tf-ftw'].StackId" \
       --output text)
+    printf "CFN_STACK_ID is $CFN_STACK_ID\n"
     aws cloudformation delete-stack --stack-name cfn-stack-tf-ftw
     CFN_STACK_STATUS=$(aws cloudformation list-stacks \
       --query "StackSummaries[?StackId=='$CFN_STACK_ID'].StackStatus" \
