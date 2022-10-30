@@ -6,6 +6,6 @@
     },
     {
         "ParameterKey": "LockTableName",
-        "ParameterValue": "tf-state-locks"
+        "ParameterValue": "tf-ftw-locks"
     }
 ]
