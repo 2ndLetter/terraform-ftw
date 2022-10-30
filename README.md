@@ -15,7 +15,7 @@
 ---
 
 ## Lessons Learned:
-- [x] Using `terraform fmt --check` improves learning proper HCL standards
+- [x] Using `terraform fmt --check` helps learning proper HCL standards
 
 ---
 
