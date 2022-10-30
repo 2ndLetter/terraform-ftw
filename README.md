@@ -14,6 +14,11 @@
 
 ---
 
+## Lessons Learned:
+- [x] Using `terraform fmt --check` improves learning proper HCL standards
+
+---
+
 ## Modules:
 - [ ] network:
   - [ ] VPC
