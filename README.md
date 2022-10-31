@@ -9,7 +9,7 @@
 - [x] Automate lab initialization
 - [x] Bootstrap AWS account with Terraform Remote State management via CloudFormation
 - [x] Build out module folder structure
-- [ ] Build out network module:
+- [x] Build out network module:
   - [x] VPC
   - [x] Subnets
   - [x] Route Tables
@@ -35,10 +35,10 @@
   - [ ] SGs
   - [ ] Launch Configs
 
-- [ ] network:
-  - [ ] VPC
-  - [ ] NACLs
-  - [ ] IGW
+- [x] network:
+  - [x] VPC
+  - [x] NACLs
+  - [x] IGW
   
 - [ ] routing
   - [ ] Route53
