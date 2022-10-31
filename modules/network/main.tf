@@ -71,7 +71,6 @@ resource "aws_internet_gateway" "this" {
 
 resource "aws_nat_gateway" "this" {
   subnet_id = aws_subnet.public.id
-  allocation_id = aws_eip.this.id
 
   tags = {
     "Name" = "${var.project}-ngw-${var.env}"
@@ -79,13 +78,7 @@ resource "aws_nat_gateway" "this" {
 
 }
 
-resource "aws_eip" "this" {
-  vpc = true
-  
-  tags = {
-    "Name" = "${var.project}-eip-${var.env}"
-  }
-}
+
 
 # ToDo:
 # - Outputs
