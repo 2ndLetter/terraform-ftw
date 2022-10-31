@@ -5,7 +5,7 @@ variable "cidr" {
   type        = string
 }
 
-variable "tag_name" {
+variable "project" {
   description = "Name tag"
   type        = string
 }

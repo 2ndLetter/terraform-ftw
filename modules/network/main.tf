@@ -7,7 +7,7 @@ resource "aws_vpc" "this" {
   cidr_block = var.cidr
 
   tags = {
-    "Name" = "${var.project}-${var.env}"
+    "Name" = "${var.project}-vpc-${var.env}"
   }
 }
 
@@ -24,7 +24,7 @@ resource "aws_route_table" "private" {
   vpc_id = aws_vpc.this.id
 
   tags = {
-    "Name" = "route-table-private-${var.env}"
+    "Name" = "${var.project}-route-table-private-${var.env}"
   }
 }
 
@@ -46,7 +46,7 @@ resource "aws_route_table" "public" {
   vpc_id = aws_vpc.this.id
 
   tags = {
-    "Name" = "route-table-public-${var.env}"
+    "Name" = "${var.project}-route-table-public-${var.env}"
   }
 }
 
