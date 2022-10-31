@@ -10,8 +10,8 @@ variable "tag_name" {
   type        = string
 }
 
-variable "environment" {
-  description = Environment
+variable "env" {
+  description = "Environment"
   type        = string
 }
 

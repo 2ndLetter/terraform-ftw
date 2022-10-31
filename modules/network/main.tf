@@ -16,7 +16,7 @@ resource "aws_subnet" "private" {
   cidr_block = "10.0.0.0/27"
 
   tags = {
-    "Name" = "tf-ftw-subnet-private"
+    "Name" = "tf-ftw-subnet-private-${var.env}"
   }
 }
 
@@ -24,7 +24,7 @@ resource "aws_route_table" "private" {
   vpc_id = aws_vpc.this.id
 
   tags = {
-    "Name" = "route-table-private"
+    "Name" = "route-table-private-${var.env}"
   }
 }
 
@@ -38,7 +38,7 @@ resource "aws_subnet" "public" {
   cidr_block = "10.0.0.32/27"
 
   tags = {
-    "Name" = "tf-ftw-subnet-public"
+    "Name" = "tf-ftw-subnet-public-${var.env}"
   }
 }
 
@@ -46,7 +46,7 @@ resource "aws_route_table" "public" {
   vpc_id = aws_vpc.this.id
 
   tags = {
-    "Name" = "route-table-public"
+    "Name" = "route-table-public-${var.env}"
   }
 }
 
@@ -59,7 +59,7 @@ resource "aws_internet_gateway" "this" {
   vpc_id = aws_vpc.this.id
 
   tags = {
-    "Name" = "tf-ftw"
+    "Name" = "tf-ftw-${var.env}"
   }
 }
 
