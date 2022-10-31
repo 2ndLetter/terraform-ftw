@@ -13,12 +13,24 @@ output "vpc_nacl_id" {
   description = "NACL ID"
 }
 
-output "subnet_private" {
-  value       = module.network.subnet_private
+output "subnet_private_id" {
+  value       = module.network.subnet_private_id
   description = "Private subnet ID"
 }
 
-output "subnet_public" {
-  value       = module.network.subnet_public
+output "route_table_private_id" {
+  value       = module.network.route_table_private_id
+  description = "Private route table ID"
+}
+
+output "route_table_assoc_private" {
+  value       = module.network.route_table_assoc_private_id
+  description = "Private route table association"
+}
+
+
+
+output "subnet_public_id" {
+  value       = module.network.subnet_public_id
   description = "Public subnet ID"
 }

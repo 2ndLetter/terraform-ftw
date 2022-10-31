@@ -8,12 +8,32 @@ output "vpc_nacl_id" {
   description = "NACL ID"
 }
 
-output "subnet_private" {
+output "subnet_private_id" {
   value       = aws_subnet.private.id
   description = "Private subnet ID"
 }
 
-output "subnet_public" {
+output "route_table_private_id" {
+  value       = aws_route_table.private.id
+  description = "Private route table ID"
+}
+
+output "route_table_assoc_private_id" {
+  value       = aws_route_table_association.private.id
+  description = "Private route table association"
+}
+
+output "subnet_public_id" {
   value       = aws_subnet.public.id
   description = "Public subnet ID"
+}
+
+output "route_table_public_id" {
+  value       = aws_route_table.public.id
+  description = "Public route table ID"
+}
+
+output "route_table_assoc_public_id" {
+  value       = aws_route_table_association.public.id
+  description = "Public route table association"
 }
