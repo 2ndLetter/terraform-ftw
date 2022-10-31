@@ -63,17 +63,17 @@
 
 ## Techonology Used:
 
-- [ ] Hashicorp Terraform
+- [x] Hashicorp Terraform
 - [ ] Hashicorp Packer
 - [ ] Terragrunt?
 - [ ] AWS
   - [ ] Route53 (Multi-Region)
-  - [ ] VPC ( Routes | NACLs )
+  - [x] VPC ( Routes | NACLs )
   - [ ] EC2 ( ELB | ASGs | Launch Configs | SGs )
-  - [ ] S3
+  - [x] S3
   - [ ] ACM
   - [ ] IAM
-  - [ ] CloudFormation
+  - [x] CloudFormation
 - [ ] Ansible
 - [ ] Chef
 - [ ] GitHub Actions?
