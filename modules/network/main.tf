@@ -1,7 +1,3 @@
-#provider "aws" {
-#  region = "us-east-1"
-#}
-
 resource "aws_vpc" "this" {
 
   cidr_block = var.cidr
@@ -92,6 +88,5 @@ resource "aws_eip" "this" {
 }
 
 # ToDo:
-# - Routes (Public/Private)
-# - Security Groups
+# - Outputs
 

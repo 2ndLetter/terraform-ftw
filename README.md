@@ -11,12 +11,11 @@
 - [x] Build out module folder structure
 - [ ] Build out network module:
   - [x] VPC
-  - [ ] Subnets
+  - [x] Subnets
   - [x] Route Tables
-  - [ ] Routes
+  - [x] Routes
   - [x] NACLs
-  - [ ] SGs
-  - [ ] Nat Gateway
+  - [x] Nat Gateway
   - [x] IGW
 - [ ] Add instructions to the scripts
 
@@ -33,12 +32,12 @@
 - [ ] application:
   - [ ] ALB
   - [ ] ASG
+  - [ ] SGs
   - [ ] Launch Configs
 
 - [ ] network:
   - [ ] VPC
   - [ ] NACLs
-  - [ ] SGs
   - [ ] IGW
   
 - [ ] routing
