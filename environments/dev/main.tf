@@ -21,7 +21,7 @@ module "network" {
   source = "../../modules/network"
 
   cidr     = "10.0.0.0/24"
-  tag_name = "tf-ftw-dev"
+  project = "tf-ftw"
   env      = "dev"
 }
 
