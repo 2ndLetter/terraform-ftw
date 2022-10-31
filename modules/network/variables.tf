@@ -9,3 +9,9 @@ variable "tag_name" {
   description = "Name tag"
   type        = string
 }
+
+variable "environment" {
+  description = Environment
+  type        = string
+}
+

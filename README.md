@@ -10,8 +10,10 @@
 - [x] Bootstrap AWS account with Terraform Remote State management via CloudFormation
 - [x] Build out module folder structure
 - [ ] Build out network module:
-  - [ ] VPC
-  - [ ] NACLs
+  - [x] VPC
+  - [ ] Subnets
+  - [x] Route Tables
+  - [x] NACLs
   - [ ] SGs
   - [ ] IGW
 - [ ] Add instructions to the scripts
