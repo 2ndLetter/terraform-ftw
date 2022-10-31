@@ -70,10 +70,10 @@ resource "aws_internet_gateway" "this" {
 }
 
 resource "aws_nat_gateway" "this" {
-  subnet_id = aws_subnet.public.id
+  subnet_id         = aws_subnet.public.id
+  connectivity_type = "private"
 
   tags = {
     "Name" = "${var.project}-ngw-${var.env}"
   }
-
 }
