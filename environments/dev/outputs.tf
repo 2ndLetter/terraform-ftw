@@ -3,11 +3,6 @@ output "vpc_id" {
   description = "VPC ID"
 }
 
-#output "vpc_rt_table_id" {
-#  value       = module.network.vpc_rt_table_id
-#  description = "Route Table ID"
-#}
-
 output "vpc_nacl_id" {
   value       = module.network.vpc_nacl_id
   description = "NACL ID"
@@ -27,6 +22,8 @@ output "route_table_assoc_private" {
   value       = module.network.route_table_assoc_private_id
   description = "Private route table association"
 }
+
+
 
 
 
