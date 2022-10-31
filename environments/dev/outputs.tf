@@ -45,4 +45,5 @@ output "internet_gateway_id" {
 
 output "nat_gateway_id" {
   value       = module.network.nat_gateway_id
+  description = "Nat Gateway ID"
 }
