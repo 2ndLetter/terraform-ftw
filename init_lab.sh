@@ -27,7 +27,8 @@ delete_lab() {
     aws s3api delete-objects --bucket $S3_BUCKET \
       --delete "$(aws s3api list-object-versions \
       --bucket $S3_BUCKET --output=json \
-      --query='{Objects: Versions[].{Key:Key,VersionId:VersionId}}')"
+      --query='{Objects: Versions[].{Key:Key,VersionId:VersionId}}')" \
+      > /dev/null
     set -e
     
     printf "Delete CFN Stack\n"
