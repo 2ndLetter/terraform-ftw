@@ -10,8 +10,6 @@ output "vpc_rt_table_id" {
 
 output "vpc_nacl_id" {
   value       = aws_vpc.this.default_network_acl_id
-  description = "NACL"
+  description = "NACL ID"
 }
-
-# Default NACL
-# 
+ 
