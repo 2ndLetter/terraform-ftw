@@ -45,6 +45,11 @@ resource "aws_subnet" "public" {
 resource "aws_route_table" "public" {
   vpc_id = aws_vpc.this.id
 
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.this.id
+  }
+
   tags = {
     "Name" = "${var.project}-route-table-public-${var.env}"
   }
@@ -60,6 +65,24 @@ resource "aws_internet_gateway" "this" {
 
   tags = {
     "Name" = "${var.project}-igw-${var.env}"
+  }
+}
+
+resource "aws_nat_gateway" "this" {
+  subnet_id = aws_subnet.public.id
+  allocation_id = aws_eip.this.id
+
+  tags = {
+    "Name" = "${var.project}-ngw-${var.env}"
+  }
+
+}
+
+resource "aws_eip" "this" {
+  vpc = true
+  
+  tags = {
+    "Name" = "${var.project}-eip-${var.env}"
   }
 }
 
