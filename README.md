@@ -9,8 +9,7 @@
 - [x] Automate lab initialization (init_lab.sh)
 - [x] Bootstrap AWS account with Terraform Remote State management via CloudFormation
 - [x] Design module folder structure
-- [ ] Add instructions to the scripts
-- [x] Build out network module:
+- [ ] Build out network module:
   - [x] VPC
   - [x] Subnets
   - [x] Route Tables
@@ -18,6 +17,8 @@
   - [x] NACLs
   - [x] Nat GW
   - [x] IGW
+  - [ ] Pimp out the module README.md
+  - [ ] Test deploying Dev and Prod
 - [ ] Build out storage module:
   - [ ] S3 Bucket
 - [ ] Build out security module:
@@ -29,7 +30,7 @@
   - [ ] Launch Configs
 - [ ] Build out dns module
   - [ ] Route53
-
+- [ ] Add instructions to the scripts
 ---
 
 ## Lessons Learned:
