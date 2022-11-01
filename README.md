@@ -8,9 +8,11 @@
 module "network" {
   source = "../../modules/network"
 
-  cidr    = "10.0.0.0/24"
-  project = "tf-ftw"
-  env     = "dev"
+  cidr     = "10.0.0.0/24"
+  priv_sub = "10.0.0.0/27"
+  pub_sub  = "10.0.0.32/27"
+  project  = "tf-ftw"
+  env      = "dev"
 }
 ```
 
@@ -20,15 +22,13 @@ module "network" {
 module "network" {
   source = "../../modules/network"
 
-  cidr    = "10.0.1.0/24"
-  project = "tf-ftw"
-  env     = "prod"
+  cidr     = "10.0.1.0/24"
+  priv_sub = "10.0.1.0/27"
+  pub_sub  = "10.0.1.32/27"
+  project  = "tf-ftw"
+  env      = "prod"
 }
 ```
-
-
-
-
 
 ## To Do:
 - [x] Learn Terraform basics (Courses/Blogs/Tutorials)
