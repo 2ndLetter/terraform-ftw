@@ -1,5 +1,25 @@
 #!/bin/bash -e
 
+####################################################################
+# The purpose of this script is to "bootstrap" an AWS account with #
+# prerequisites for Terraform Remote State management. I'm using   #
+# "A Cloud Guru" Cloud Sandboxes for this lab.                     #
+####################################################################
+
+#######################################################
+# Initialize the lab: ./init.sh -i                    #
+#   Use to deploy prerequisites to a new AWS account. #
+#   AWS resources: S3 Bucket and DynamoDB Table.      #
+#                                                     #
+# Delete the lab: ./init.sh -d                        #
+#   Use to delete prerequisites from an AWS account.  #
+#                                                     #
+# Clean up the lab: ./init.sh -c                      #
+#   Use to delete files initialization preparation.   #
+#   Only run if Cloud Sandbox is already deleted.     #
+#######################################################
+
+
 while getopts 'dic' OPTION; do
   case "$OPTION" in
     d)
