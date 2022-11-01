@@ -34,8 +34,8 @@
 
 ## Lessons Learned:
 - [x] Using `terraform fmt --check` helps learning proper HCL standards
-- [x] Child Module Outputs: "module.<MODULE_NAME>.<OUTPUT_NAME>"
-- [x] Root Module Outputs:  "aws_<TYPE>.<NAME>.<ATTRIBUTE>"
+- [x] Child Module Outputs: `module.<MODULE_NAME>.<OUTPUT_NAME>`
+- [x] Root Module Outputs:  `aws_<TYPE>.<NAME>.<ATTRIBUTE>`
 
 ---
 
