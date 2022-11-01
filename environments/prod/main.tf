@@ -17,11 +17,12 @@ terraform {
   }
 }
 
-resource "aws_instance" "web" {
-  ami           = "ami-09d3b3274b6c5d4aa"
-  instance_type = "t2.micro"
+module "network" {
+  source = "../../modules/network"
 
-  tags = {
-    Name = "HelloWorld"
-  }
+  cidr     = "10.0.1.0/24"
+  priv_sub = "10.0.1.0/27"
+  pub_sub  = "10.0.1.32/27"
+  project  = "tf-ftw"
+  env      = "prod"
 }
