@@ -15,7 +15,7 @@
 #   Use to delete prerequisites from an AWS account.  #
 #                                                     #
 # Clean up the lab: ./init_lab.sh -c                  #
-#   Use to delete files initialization preparation.   #
+#   Use to delete files some Terraform files.         #
 #   Only run if Cloud Sandbox is already deleted.     #
 #######################################################
 
