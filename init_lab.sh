@@ -3,7 +3,7 @@
 ####################################################################
 # The purpose of this script is to "bootstrap" an AWS account with #
 # prerequisites for Terraform Remote State management. I'm using   #
-# "A Cloud Guru" Cloud Sandboxes for this lab.                     #
+# "A Cloud Guru" Cloud Sandboxes for testing.                      #
 ####################################################################
 
 #######################################################
