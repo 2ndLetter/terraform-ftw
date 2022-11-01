@@ -1,6 +1,6 @@
 # terraform-ftw
 
-*The purpose of this **unfinished** repository is to document my Terraform journey, and display my current level of expertise.*
+*The purpose of this **unfinished** repository is to document my Terraform journey, and nerd-out!*
 
 ## To Do:
 - [x] Learn Terraform basics (Courses/Blogs/Tutorials)
