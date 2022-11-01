@@ -69,15 +69,6 @@ module "network" {
 
 ---
 
-## Notes:
-- [ ] New VPC through multi-region application
-- [ ] Architecture Diagram (Graph)
-- [ ] Video of the deployment?
-- [ ] PDF of the deployment?
-- [ ] Output from tree command
-
----
-
 ## Techonology Used:
 
 - [x] Hashicorp Terraform
@@ -116,3 +107,12 @@ module "network" {
 - [ ] Functions
 - [ ] Expressions
 - [ ] Testing ( Terratest | Terraform-compliance )
+
+---
+
+## Notes:
+- [ ] New VPC through multi-region application
+- [ ] Architecture Diagram (Graph)
+- [ ] Video of the deployment?
+- [ ] PDF of the deployment?
+- [ ] Output from tree command
