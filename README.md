@@ -121,10 +121,9 @@ module "network" {
 
 ---
 
-## Study Material:
+## Learning Material:
 - [x] [Hashicorp Certified Terraform Associate](https://learn.acloud.guru/course/hashicorp-certified-terraform-associate-1/overview)
-- [x] 
-- [x] 
-- [x] 
-- [x] 
-- [x] 
+- [x] [Using Terraform to Manage Applications and Infrastructure](https://learn.acloud.guru/course/using-terraform-to-manage-applications-and-infrastructure/overview)
+- [x] [Hands-On Troubleshooting with Terraform](https://learn.acloud.guru/course/hands-on-troubleshooting-with-terraform/overview)
+- [x] [Deploying to AWS with Terraform and Ansible](https://learn.acloud.guru/course/8a6f598f-a41f-48ff-99a6-2c7a760b4119/overview)
+- [x] [A Comprehensive Guide to Terraform (Gruntwork Blog)](https://blog.gruntwork.io/a-comprehensive-guide-to-terraform-b3d32832baca)
