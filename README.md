@@ -2,7 +2,7 @@
 
 *The purpose of this **unfinished** repository is to document my Terraform journey, and nerd-out!*
 
-## Network Module Usage
+## Network Module Usage (Dev)
 
 ```hcl
 module "network" {
@@ -11,6 +11,18 @@ module "network" {
   cidr    = "10.0.0.0/24"
   project = "tf-ftw"
   env     = "dev"
+}
+```
+
+## Network Module Usage (Prod)
+
+```hcl
+module "network" {
+  source = "../../modules/network"
+
+  cidr    = "10.0.1.0/24"
+  project = "tf-ftw"
+  env     = "prod"
 }
 ```
 
