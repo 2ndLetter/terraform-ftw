@@ -7,14 +7,14 @@
 ####################################################################
 
 #######################################################
-# Initialize the lab: ./init.sh -i                    #
+# Initialize the lab: ./init_lab.sh -i                #
 #   Use to deploy prerequisites to a new AWS account. #
 #   AWS resources: S3 Bucket and DynamoDB Table.      #
 #                                                     #
-# Delete the lab: ./init.sh -d                        #
+# Delete the lab: ./init_lab.sh -d                    #
 #   Use to delete prerequisites from an AWS account.  #
 #                                                     #
-# Clean up the lab: ./init.sh -c                      #
+# Clean up the lab: ./init_lab.sh -c                  #
 #   Use to delete files initialization preparation.   #
 #   Only run if Cloud Sandbox is already deleted.     #
 #######################################################
