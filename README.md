@@ -32,6 +32,7 @@ module "network" {
 
 ## To Do:
 - [x] Learn Terraform basics (Courses/Blogs/Tutorials)
+  - [x] Links to study material found at the bottom of this README.md
   - [x] Learn how to keep my TF IaC DRY
   - [x] Learn how to use Local Terraform Modules
 - [x] Automate lab initialization (init_lab.sh)
@@ -117,3 +118,13 @@ module "network" {
 - [ ] Video of the deployment?
 - [ ] PDF of the deployment?
 - [ ] Output from tree command
+
+---
+
+## Study Material:
+- [x] [Hashicorp Certified Terraform Associate](https://learn.acloud.guru/course/hashicorp-certified-terraform-associate-1/overview)
+- [x] 
+- [x] 
+- [x] 
+- [x] 
+- [x] 
