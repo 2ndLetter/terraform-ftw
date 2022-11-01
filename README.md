@@ -19,8 +19,6 @@
   - [x] IGW
 - [ ] Add instructions to the scripts
 
-- [ ] Read AWS VPC Module documentation to figure out how to use
-
 ---
 
 ## Lessons Learned:
