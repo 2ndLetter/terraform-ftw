@@ -20,8 +20,10 @@ terraform {
 module "network" {
   source = "../../modules/network"
 
-  cidr    = "10.0.0.0/24"
-  project = "tf-ftw"
-  env     = "dev"
+  cidr     = "10.0.0.0/24"
+  priv_sub = "10.0.0.0/27"
+  pub_sub  = "10.0.0.32/27"
+  project  = "tf-ftw"
+  env      = "dev"
 }
 

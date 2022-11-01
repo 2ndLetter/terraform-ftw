@@ -9,7 +9,7 @@ resource "aws_vpc" "this" {
 
 resource "aws_subnet" "private" {
   vpc_id     = aws_vpc.this.id
-  cidr_block = "10.0.0.0/27"
+  cidr_block = "${var.priv_sub}"
 
   tags = {
     "Name" = "${var.project}-subnet-private-${var.env}"
@@ -36,7 +36,7 @@ resource "aws_route_table_association" "private" {
 
 resource "aws_subnet" "public" {
   vpc_id     = aws_vpc.this.id
-  cidr_block = "10.0.0.32/27"
+  cidr_block = "${var.pub_sub}"
 
   tags = {
     "Name" = "${var.project}-subnet-public-${var.env}"

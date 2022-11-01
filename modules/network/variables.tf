@@ -15,3 +15,12 @@ variable "env" {
   type        = string
 }
 
+variable "priv_sub" {
+  description = "Private subnet address"
+  type        = string
+}
+
+variable "pub_sub" {
+  description = "Public subnet address"
+  type        = string
+}
