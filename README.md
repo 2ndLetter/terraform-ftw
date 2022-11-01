@@ -6,9 +6,10 @@
 - [x] Learn Terraform basics (Courses/Blogs/Tutorials)
   - [x] Learn how to keep my TF IaC DRY
   - [x] Learn how to use Local Terraform Modules
-- [x] Automate lab initialization
+- [x] Automate lab initialization (init_lab.sh)
 - [x] Bootstrap AWS account with Terraform Remote State management via CloudFormation
-- [x] Build out module folder structure
+- [x] Design module folder structure
+- [ ] Add instructions to the scripts
 - [x] Build out network module:
   - [x] VPC
   - [x] Subnets
@@ -28,10 +29,6 @@
   - [ ] Launch Configs
 - [ ] Build out dns module
   - [ ] Route53
-
-
-
-- [ ] Add instructions to the scripts
 
 ---
 
