@@ -15,38 +15,28 @@
   - [x] Route Tables
   - [x] Routes
   - [x] NACLs
-  - [x] Nat Gateway
+  - [x] Nat GW
   - [x] IGW
+- [ ] Build out storage module:
+  - [ ] S3 Bucket
+- [ ] Build out security module:
+  - [ ] IAM Role (Instance Profile)
+- [ ] Build out application module:
+  - [ ] ALB
+  - [ ] ASG
+  - [ ] SGs
+  - [ ] Launch Configs
+- [ ] Build out dns module
+  - [ ] Route53
+
+
+
 - [ ] Add instructions to the scripts
 
 ---
 
 ## Lessons Learned:
 - [x] Using `terraform fmt --check` helps learning proper HCL standards
-
----
-
-## Modules:
-- [ ] application:
-  - [ ] ALB
-  - [ ] ASG
-  - [ ] SGs
-  - [ ] Launch Configs
-
-- [x] network:
-  - [x] VPC
-  - [x] NACLs
-  - [x] IGW
-  
-- [ ] routing
-  - [ ] Route53
-  - [ ] Route Tables
-
-- [ ] Storage:
-  - [ ] S3 Buckets
-
-- [ ] Security:
-  - [ ] IAM
 
 ---
 
