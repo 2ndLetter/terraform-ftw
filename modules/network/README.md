@@ -1,5 +1,7 @@
 # network module
 
+*See root README.md for usage*
+
 ## Components:
 - [x] Virtual Private Cloud (VPC)
 - [x] Network Access Control List (NACL)

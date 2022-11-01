@@ -37,7 +37,7 @@ module "network" {
 - [x] Automate lab initialization (init_lab.sh)
 - [x] Bootstrap AWS account with Terraform Remote State management via CloudFormation
 - [x] Design module folder structure
-- [ ] Build out network module:
+- [x] Build out network module:
   - [x] VPC
   - [x] Subnets
   - [x] Route Tables
@@ -45,8 +45,8 @@ module "network" {
   - [x] NACLs
   - [x] Nat GW
   - [x] IGW
-  - [ ] Pimp out the module README.md ([Example](https://github.com/terraform-aws-modules/terraform-aws-vpc/blob/master/README.md))
-  - [ ] Test deploying Dev and Prod
+  - [x] Pimp out the module README.md ([Example](https://github.com/terraform-aws-modules/terraform-aws-vpc/blob/master/README.md))
+  - [x] Test deploying Dev and Prod
 - [ ] Build out storage module:
   - [ ] S3 Bucket
 - [ ] Build out security module:
