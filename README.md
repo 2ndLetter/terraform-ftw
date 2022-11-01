@@ -1,6 +1,6 @@
 # terraform-ftw
 
-*The purpose of this repository is to document my Terraform journey, as well as display my current level of expertise.*
+*The purpose of this repository is to document my Terraform journey, and display my current level of expertise.*
 
 ## To Do:
 - [x] Learn Terraform basics (Courses/Blogs/Tutorials)
@@ -34,6 +34,8 @@
 
 ## Lessons Learned:
 - [x] Using `terraform fmt --check` helps learning proper HCL standards
+- [x] Child Module Outputs: "module.<MODULE_NAME>.<OUTPUT_NAME>"
+- [x] Root Module Outputs:  "<PROVIDER>_<TYPE>.<NAME>.<ATTRIBUTE>"
 
 ---
 
