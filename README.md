@@ -37,6 +37,7 @@ module "network" {
 - [x] Automate lab initialization (init_lab.sh)
 - [x] Bootstrap AWS account with Terraform Remote State management via CloudFormation
 - [x] Design module folder structure
+- [x] Add instructions for the script
 - [x] Build out network module:
   - [x] VPC
   - [x] Subnets
@@ -58,7 +59,7 @@ module "network" {
   - [ ] Launch Configs
 - [ ] Build out dns module
   - [ ] Route53
-- [ ] Add instructions to the scripts
+
 ---
 
 ## Lessons Learned:
