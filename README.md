@@ -17,7 +17,7 @@
   - [x] NACLs
   - [x] Nat GW
   - [x] IGW
-  - [ ] Pimp out the module README.md
+  - [ ] Pimp out the module README.md ([Example](https://github.com/terraform-aws-modules/terraform-aws-vpc/blob/master/README.md))
   - [ ] Test deploying Dev and Prod
 - [ ] Build out storage module:
   - [ ] S3 Bucket
