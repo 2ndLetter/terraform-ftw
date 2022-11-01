@@ -2,6 +2,22 @@
 
 *The purpose of this **unfinished** repository is to document my Terraform journey, and nerd-out!*
 
+## Network Module Usage
+
+```hcl
+module "network" {
+  source = "../../modules/network"
+
+  cidr    = "10.0.0.0/24"
+  project = "tf-ftw"
+  env     = "dev"
+}
+```
+
+
+
+
+
 ## To Do:
 - [x] Learn Terraform basics (Courses/Blogs/Tutorials)
   - [x] Learn how to keep my TF IaC DRY
